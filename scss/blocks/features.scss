@@ -1,7 +1,7 @@
 .features{
   display: flex;
 
-  &__feature:not(:last-child){
-    margin-right: 34px;
+  &__item:not(:last-child){
+    margin-right: 7px;
   }
 }

@@ -21,13 +21,13 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 950px;
+  min-width: 935px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 930px;
+  width: 915px;
   margin: 0 auto;
 }
 
@@ -37,7 +37,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  padding: 9px;
+  padding: 0;
   font-weight: 400;
 }
 
@@ -81,6 +81,7 @@ address {
   font-weight: 700;
   font-size: 48px;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 .headline-1--center {
   text-align: center;
@@ -172,23 +173,25 @@ address {
   margin-bottom: 94px;
 }
 .hero__title-section {
-  width: 400px;
-  margin-bottom: 70px;
+  width: 43%;
+  margin-bottom: 66px;
 }
 .hero__title {
   margin-bottom: 22px;
 }
 .hero__title-desc {
+  font-family: "Alegreya Sans", sans-serif;
   font-size: 21px;
   line-height: 1.2;
   margin-bottom: 36px;
+  width: 85%;
 }
 
 .features {
   display: flex;
 }
-.features__feature:not(:last-child) {
-  margin-right: 34px;
+.features__item:not(:last-child) {
+  margin-right: 7px;
 }
 
 .feature {
@@ -198,7 +201,63 @@ address {
   margin-right: 12px;
 }
 .feature__text {
+  width: 114px;
   font-size: 16px;
   line-height: 1.13;
-  width: 114px;
+}
+
+.section--features {
+  padding-top: 101px;
+  padding-bottom: 98px;
+}
+.section--features .section__header {
+  margin-bottom: 63px;
+}
+.section--features .section__title {
+  margin-bottom: 18px;
+}
+.section--features .section__title-postscript {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.2;
+  width: 590px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.reasons {
+  display: flex;
+  justify-content: space-between;
+}
+.reasons__item {
+  width: 27.3%;
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.reason__icon {
+  width: 128px;
+  height: 128px;
+  background-color: #F2F5F4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.reason__img {
+  width: 68px;
+  height: 68px;
+}
+.reason__title {
+  margin-bottom: 7px;
+}
+.reason__text {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
 }

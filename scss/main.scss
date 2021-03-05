@@ -10,7 +10,7 @@ $fontGray: #666;
 //-----------------------------------------------------------------
 // sizes
 
-$contentWidth: 930px;
+$contentWidth: 915px;
 $baseFontSize: 18px;
 
 //-----------------------------------------------------------------
@@ -38,3 +38,6 @@ $baseFontSize: 18px;
 @import 'blocks/hero.scss';
 @import 'blocks/features.scss';
 @import 'blocks/feature.scss';
+@import 'blocks/section.scss';
+@import 'blocks/reasons.scss';
+@import 'blocks/reason.scss';

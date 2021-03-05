@@ -8,15 +8,17 @@
   }
 
   &__title-section{
-    width: 400px;
-    margin-bottom: 70px;
+    width: 43%;
+    margin-bottom: 66px;
   }
   &__title{
     margin-bottom: 22px;
   }
   &__title-desc{
+    font-family: "Alegreya Sans", sans-serif;
     font-size: 21px;
     line-height: 1.2;
     margin-bottom: 36px;
+    width: 85%;
   }
 }
