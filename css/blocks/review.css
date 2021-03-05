@@ -1,0 +1,17 @@
+.review {
+  background-color: #F8FAF9;
+}
+.review__img-col {
+  padding: 42px;
+  padding-right: 40px;
+  width: 335px;
+}
+.review__content {
+  padding-top: 74px 107px 63px 0;
+}
+.review__header {
+  margin-bottom: 27px;
+}
+.review__text {
+  margin-bottom: 38px;
+}

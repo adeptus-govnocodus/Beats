@@ -20,4 +20,15 @@
       }
     }
   }
+
+  &--reviews{
+    padding-top: 68px;
+    padding-bottom: 63px;
+
+    .section{
+      &__title{
+        margin-bottom: 32px;
+      }
+    }
+  }
 }

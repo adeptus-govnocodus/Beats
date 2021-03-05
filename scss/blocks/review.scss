@@ -1,0 +1,54 @@
+.review{
+  background-color: #F8FAF9;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  &__img-col{
+    padding: 42px;
+    padding-right: 40px;
+    width: 335px;
+    flex-shrink: 0;
+  }
+  &__content{
+    padding: 74px 107px 63px 0;
+  }
+  &__header{
+    margin-bottom: 27px;
+  }
+  &__text{
+    margin-bottom: 38px;
+
+    p{
+      color: $fontGray;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+  &__username{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  &::after{
+    content: "";
+    display: block;
+    width: 83px;
+    height: 83px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: -61px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+}

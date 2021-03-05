@@ -1,0 +1,27 @@
+.reviews{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__review{
+    margin-bottom: 15px;
+  }
+
+  &__list{
+    display: flex;
+  }
+  &__item{
+    margin-right: 6px;
+
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    overflow: hidden;
+    &--active{
+      border: 4px solid $red;
+    }
+  }
+  &__item:last-child{
+    margin-right: 0;
+  }
+}
