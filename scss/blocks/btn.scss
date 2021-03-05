@@ -1,0 +1,37 @@
+.btn{
+  display: inline-block;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 200ms, color 200ms;
+  -webkit-transition: background 200ms, color 200ms;
+  -moz-transition: background 200ms, color 200ms;
+  -ms-transition: background 200ms, color 200ms;
+  -o-transition: background 200ms, color 200ms;
+  
+  
+  &--color--red-bg{
+    padding: 18px 41px;
+    color: white;
+    background-color: #E01F3D;
+    &:hover{
+      background-color: #CA1B36;
+    }
+  }
+  
+  &--color--red{
+    color: #E01F3D;
+    &:hover{
+      color: #CA1B36;
+    }
+  }
+
+  &--color--black{
+    color: #E01F3D;
+    &:hover{
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.navbar{
+  font-family: "Alegreya Sans", sans-serif;
+
+  &__list{
+    display: flex;
+  }
+
+  &__item:not(:last-child){
+    margin-right: 27px;
+  }
+}

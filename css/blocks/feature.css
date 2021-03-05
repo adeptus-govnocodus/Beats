@@ -1,0 +1,10 @@
+.feature {
+  display: flex;
+}
+.feature__icon {
+  margin-right: 12px;
+}
+.feature__text {
+  font-size: 16px;
+  line-height: 1.13;
+}

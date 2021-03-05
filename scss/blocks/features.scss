@@ -1,0 +1,7 @@
+.features{
+  display: flex;
+
+  &__feature:not(:last-child){
+    margin-right: 34px;
+  }
+}

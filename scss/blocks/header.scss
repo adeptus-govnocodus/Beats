@@ -1,0 +1,14 @@
+.header{
+  &__wrapper{
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo{
+    margin-right: 38px;
+  }
+
+  &__contacts{
+    margin-left: auto;
+  }
+}
