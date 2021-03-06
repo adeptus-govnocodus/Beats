@@ -15,12 +15,12 @@ body{
 .wrapper{
   position: relative;
   width: 100%;
-  min-width: $contentWidth+20px;
+  min-width: $contentWidthLarge;
   min-height: 100%;
   overflow: hidden;
 }
 .container{
-  width: $contentWidth;
+  width: $contentWidthLarge - 180px;
   margin: 0 auto;
 }
 

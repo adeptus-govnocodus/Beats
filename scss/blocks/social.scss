@@ -1,0 +1,14 @@
+.social{
+  display: flex;
+  
+  
+  &__item{
+    margin-right: 10px;
+  }
+  &__link{
+    background: url('../img/social/facebook.svg') center center/ 100% 100% no-repeat;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+}

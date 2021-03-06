@@ -1,0 +1,8 @@
+.bottom-section{
+  display: flex;
+  flex-direction: column;
+
+  &__map{
+    flex: 1;
+  }
+}

@@ -10,7 +10,7 @@ $fontGray: #666;
 //-----------------------------------------------------------------
 // sizes
 
-$contentWidth: 915px;
+$contentWidthLarge: 1100px;
 $baseFontSize: 18px;
 
 //-----------------------------------------------------------------
@@ -39,9 +39,14 @@ $baseFontSize: 18px;
 @import 'blocks/features.scss';
 @import 'blocks/feature.scss';
 @import 'blocks/section.scss';
-@import 'blocks/reasons.scss';
-@import 'blocks/reason.scss';
+@import 'blocks/benefits.scss';
+@import 'blocks/benefit.scss';
 @import 'blocks/reviews.scss';
 @import 'blocks/review.scss';
 @import 'blocks/form.scss';
 @import 'blocks/controll.scss';
+@import 'blocks/bottom-section.scss';
+@import 'blocks/footer.scss';
+@import 'blocks/social.scss';
+@import 'blocks/map.scss';
+@import 'blocks/fixed-menu.scss';
