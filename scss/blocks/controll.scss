@@ -1,0 +1,54 @@
+.controll{
+  display: flex;
+  user-select: none;
+
+  &__el{
+    display: none;
+  }
+  &__visible{
+    width: 25px;
+    height: 25px;
+
+    position: relative;
+    margin-right: 10px;
+    background-color: white;
+
+    &::before{
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 100ms;
+    }   
+  }
+  &__el:checked ~ &__visible{
+    &::before, &::after{ opacity:1 }
+  }
+
+
+  &--radio &{
+    &__visible{
+      border-radius: 50%;
+   
+      &::before{
+        content: "";
+        background-color: $red;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+      }
+    }
+  }
+  &--checkbox &{
+    &__visible{
+      border-radius: 4px;
+
+      &::before{
+        content: url('../../img/icons/checked.svg');
+        width: 10px;
+      }
+    }
+  }
+}

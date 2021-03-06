@@ -1,4 +1,9 @@
 .section{
+  &__title{
+    text-align: center;
+  }
+
+  
   &--features{
     padding-top: 101px;
     padding-bottom: 98px;
@@ -20,7 +25,6 @@
       }
     }
   }
-
   &--reviews{
     padding-top: 68px;
     padding-bottom: 63px;
@@ -28,6 +32,18 @@
     .section{
       &__title{
         margin-bottom: 32px;
+      }
+    }
+  }
+  &--oreder{
+    padding-top: 68px;
+    padding-bottom: 85px;
+    background-color: #161616;
+    color: white;
+
+    .section{
+      &__title{
+        margin-bottom: 61px;
       }
     }
   }

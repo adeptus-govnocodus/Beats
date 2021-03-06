@@ -15,23 +15,35 @@
   &--color--red-bg{
     padding: 18px 41px;
     color: white;
-    background-color: #E01F3D;
+    background-color: $red;
     &:hover{
       background-color: #CA1B36;
     }
   }
   
   &--color--red{
-    color: #E01F3D;
+    color: $red;
     &:hover{
       color: #CA1B36;
     }
   }
 
   &--color--black{
-    color: #E01F3D;
+    text-transform: none;
+    font-family: inherit;
+    font-weight: inherit;
+    color: $red;
     &:hover{
       color: black;
+    }
+  }
+  &--color--white{
+    text-transform: none;
+    font-family: inherit;
+    font-weight: inherit;
+    color: white;
+    &:hover{
+      color: $red;
     }
   }
 }

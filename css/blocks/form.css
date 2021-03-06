@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.form__col {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 27px;
+}
+.form__col:last-child {
+  margin-right: 0;
+}
+.form__row {
+  display: flex;
+}
+.form__cell {
+  flex: 1 1;
+  margin-right: 15px;
+}
+.form__cell:last-child {
+  margin-right: 0;
+}
+.form__title {
+  margin-bottom: 6px;
+}
+.form__input {
+  outline: none;
+  border: none;
+  height: 58px;
+  width: 100%;
+  border-radius: 4px;
+}
+.form__controlls {
+  display: flex;
+}
+.form__controll {
+  margin-right: 15px;
+}
+.form__controll:last-child {
+  margin-right: 0;
+}
