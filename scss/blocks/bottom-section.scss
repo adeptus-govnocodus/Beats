@@ -1,6 +1,7 @@
 .bottom-section{
   display: flex;
   flex-direction: column;
+  height: 100vh;
 
   &__map{
     flex: 1;
