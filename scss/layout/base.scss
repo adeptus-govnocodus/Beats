@@ -7,6 +7,13 @@ html{
   font-family: 'Play', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smothing: grayscale;
+
+  @include tablets{
+    font-size: $baseFontSize - 1px;
+  }
+  @include phones{
+    font-size: $baseFontSize - 2px;
+  }
 }
 body{
   position: relative;
@@ -15,13 +22,19 @@ body{
 .wrapper{
   position: relative;
   width: 100%;
-  min-width: $contentWidthLarge;
+  min-width: 100%;
   min-height: 100%;
   overflow: hidden;
 }
 .container{
-  width: $contentWidthLarge - 160px;
+  position: relative;
+  width: 85%;
+  max-width: $contentWidthLarge;
   margin: 0 auto;
+
+  @include tablets{
+    width: 94%;
+  }
 }
 
 *{
@@ -54,6 +67,10 @@ img{
   display: block;
   max-width: 100%;
 }
+svg{
+  max-width: 100%;
+  max-height: 100%;
+}
 footer{
   position: relative;
   width: 100%;
@@ -61,27 +78,6 @@ footer{
 address{
   font-style: normal;
 }
-
-.headline-1{
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 1.1;
-  text-transform: uppercase;
-  &--center{
-    text-align: center;
-  }
-}
-.headline-2{
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-}
-.headline-3{
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.16;
-}
-
 button{
   background-color: inherit;
   border: none;

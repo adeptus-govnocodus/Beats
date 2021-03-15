@@ -3,7 +3,7 @@
   
   
   &__item{
-    margin-right: 10px;
+    margin-right: rem(10px);
     &:last-child{
       margin-right: 0;
     }
@@ -11,20 +11,14 @@
   &__link{
     background: center center/ 100% 100% no-repeat;
     display: block;
-    width: 30px;
-    height: 30px;
-
-    &--vk{
-      background-image: url('../img/social/vk.svg');
-    }
-    &--fb{
-      background-image: url('../img/social/fb.svg');
-    }
-    &--in{
-      background-image: url('../img/social/in.svg');
-    }
-    &--tg{
-      background-image: url('../img/social/tg.svg');
-    }
+    width: rem(30px);
+    height: rem(30px);
   }
+  &__icon{
+    fill: #B3B3B3;
+    transition: fill 100ms;
+  }
+  &__link:hover &__icon{
+    fill: black;
+  }  
 }

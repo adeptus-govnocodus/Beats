@@ -5,29 +5,29 @@
   overflow: hidden;
 
   &__img-col{
-    padding: 42px;
-    padding-right: 40px;
-    width: 335px;
+    padding: rem(42px);
+    padding-right: rem(40px);
+    width: rem(335px);
     flex-shrink: 0;
   }
   &__content{
-    padding: 74px 107px 63px 0;
+    padding: rem(74px) rem(107px) rem(63px) 0;
   }
   &__header{
-    margin-bottom: 27px;
+    margin-bottom: rem(27px);
   }
   &__text{
-    margin-bottom: 38px;
+    margin-bottom: rem(38px);
 
     p{
       color: $fontGray;
-      font-size: 16px;
+      font-size: rem(16px);
       line-height: 1.2;
     }
   }
   &__username{
     font-weight: 700;
-    font-size: 18px;
+    font-size: rem(18px);
     line-height: 1.2;
   }
 
@@ -39,7 +39,7 @@
     background-color: white;
     position: absolute;
     left: 50%;
-    top: -61px;
+    top: rem(-61px);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -50,5 +50,33 @@
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
-}
+  }
+
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__img-col{
+      max-width: 130px;
+      padding: 0;
+      padding-top: 56px;
+      margin-bottom: rem(32px);      
+    }
+    &__content{
+      padding: 0 rem(24px) rem(45px);
+    }
+    &__header{
+      margin-bottom: 1rem;
+    }
+    &__text{
+      margin-bottom: rem(19px);
+    }
+  }
+
+  @include phones{
+    &::after{
+      content: none;
+    }
+  }
 }

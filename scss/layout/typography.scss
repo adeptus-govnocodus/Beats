@@ -1,0 +1,22 @@
+.headline-1{
+  font-weight: 700;
+  font-size: rem(48px);
+  line-height: 1.1;
+  text-transform: uppercase;
+  &--center{
+    text-align: center;
+  }
+  @include phones{
+    font-size: 32px;
+  }
+}
+.headline-2{
+  font-weight: 700;
+  font-size: rem(36px);
+  line-height: 1.16;
+}
+.headline-3{
+  font-weight: 700;
+  font-size: rem(24px);
+  line-height: 1.16;
+}

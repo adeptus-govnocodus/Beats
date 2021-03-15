@@ -3,9 +3,11 @@
 
   &__list{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__item:not(:last-child){
-    margin-right: 27px;
+    margin-right: rem(27px);
   }
 }

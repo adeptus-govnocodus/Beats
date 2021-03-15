@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=1100, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/main.css">
 
@@ -16,7 +16,9 @@
         <header class="hero__header header">
           <div class="header__wrapper">
             <a class="header__logo logo">
-              <img src="img/logo.svg" alt="logo">
+              <svg class="logo__icon">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
             </a>
             <nav class="header__navbar navbar">
               <ul class="navbar__list">
@@ -30,11 +32,21 @@
               </ul>
             </nav>
             <address class="header__contacts contacts">
-              <div class="contacts__phone">8 800 903 90 90</div>
-            </address>
+              <div class="contacts__phone">
+                <svg class="contacts__phone-icon" width="14" height="15">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                8 800 903 90 90
+              </div>
+            </address>            
+            <div class="header__hamburger hamburger">
+              <svg class="hamburger__svg">
+                <use xlink:href="img/sprite.svg#hamburger"></use>
+              </svg>
+            </div>
           </div>
         </header>
-
+        
         <div class="hero__title-section">
           <h1 class="hero__title headline-1">Беспроводные наушники Beats Solo 3</h1>
           <div class="hero__title-desc">Встречайте новую версию наушников из линейки Powerbeats.</div>
@@ -62,7 +74,7 @@
               <div class="feature__text">Технология Fast Fuel</div>
             </li>
           </ul>
-        </div>                    
+        </div>                  
       </div>
     </section>
     <section class="section section--benefits">
@@ -78,27 +90,33 @@
             <div class="benefit__icon">
               <img class="benefits__img" src="img/features/feat-1.svg" alt="feature icon">
             </div>
-            <h3 class="benefit__title headline-3">40 часов работы</h3>
-            <div class="benefit__text">
-              Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день.
+            <div class="benefit__content">
+              <h3 class="benefit__title headline-3">40 часов работы</h3>
+              <div class="benefit__text">
+                Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день.
+              </div>
             </div>
           </li>
           <li class="benefits__item benefit">
             <div class="benefit__icon">
               <img class="benefits__img" src="img/features/feat-2.svg" alt="feature icon">
             </div>
-            <h3 class="benefit__title headline-3">Фирменное звучание</h3>
-            <div class="benefit__text">
-              Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились.
+            <div class="benefit__content">
+              <h3 class="benefit__title headline-3">Фирменное звучание</h3>
+              <div class="benefit__text">
+                Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились.
+              </div>
             </div>
           </li>
           <li class="benefits__item benefit">
             <div class="benefit__icon">
               <img class="benefits__img" src="img/features/feat-3.svg" alt="feature icon">
             </div>
-            <h3 class="benefit__title headline-3">Быстрая зарядка</h3>
-            <div class="benefit__text">
-              Благодаря технологии Fast Fuel всего через 5 минут зарядки вы сможете слушать музыку ещё 3 часа.
+            <div class="benefit__content">
+              <h3 class="benefit__title headline-3">Быстрая зарядка</h3>
+              <div class="benefit__text">
+                Благодаря технологии Fast Fuel всего через 5 минут зарядки вы сможете слушать музыку ещё 3 часа.
+              </div>
             </div>
           </li>
         </ul>
@@ -223,23 +241,40 @@
         <footer class="bottom-section__footer footer">
           <addres class="footer__contacts contacts">
             <div class="contacts__addres">Москва, ул.Новый Арбат, д.31/12</div>
-            <a href="tel:88009039090" class="contacts__phone">8 800 903 90 90</a>
+            <a href="tel:88009039090" class="contacts__phone">
+              <svg class="contacts__phone-icon" width="14" height="15">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+              8 800 903 90 90
+            </a>
           </addres>
           <ul class="social">
             <li class="social__item">
               <a href="#" class="social__link social__link--vk">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#soc-vk"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link social__link--fb">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#soc-fb"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link social__link--in">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#soc-in"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link social__link--tg">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#soc-tg"></use>
+                </svg>
               </a>
             </li>
           </ul>

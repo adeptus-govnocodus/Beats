@@ -1,11 +1,11 @@
 .feature{
   display: flex;
   &__icon{
-    margin-right: 12px;
+    margin-right: rem(12px);
   }
   &__text{
-    width: 114px;
-    font-size: 16px;
+    width: rem(114px);
+    font-size: rem(16px);
     line-height: 1.13;
   }
 }

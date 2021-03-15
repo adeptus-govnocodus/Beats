@@ -10,8 +10,11 @@ $fontGray: #666;
 //-----------------------------------------------------------------
 // sizes
 
-$contentWidthLarge: 1100px;
 $baseFontSize: 18px;
+$contentWidthLarge: 1100px;
+
+$tablets: 768px;
+$phone: 480px;
 
 //-----------------------------------------------------------------
 // fonts
@@ -20,10 +23,16 @@ $baseFontSize: 18px;
 @import 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Play:wght@400;700&display=swap';
 
 //-----------------------------------------------------------------
+// media
+
+@import 'layout/media.scss';
+
+//-----------------------------------------------------------------
 // normalize
 
 @import 'https://necolas.github.io/normalize.css/8.0.1/normalize.css';
 @import 'layout/base.scss';
+@import 'layout/typography.scss';
 
 //-----------------------------------------------------------------
 // blocks
@@ -50,3 +59,4 @@ $baseFontSize: 18px;
 @import 'blocks/social.scss';
 @import 'blocks/map.scss';
 @import 'blocks/fixed-menu.scss';
+@import 'blocks/hamburger.scss';

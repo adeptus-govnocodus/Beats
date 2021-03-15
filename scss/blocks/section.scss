@@ -1,7 +1,7 @@
 .section{
   position: relative;
   height: 100vh;
-  min-height: 651px;
+  min-height: rem(651px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,8 +15,8 @@
     &::before{
       content: '';
       display: block;
-      border: 18px solid transparent;
-      border-top: 35px solid #E01F3D;
+      border: rem(18px) solid transparent;
+      border-top: rem(35px) solid #E01F3D;
       border-bottom: none;
       position: absolute;
       top: 100%;
@@ -27,16 +27,16 @@
   }
   &--benefits &{
     &__header{
-      margin-bottom: 63px;
+      margin-bottom: rem(63px);
     }
     &__title{
-      margin-bottom: 18px;
+      margin-bottom: rem(18px);
     }
     &__title-postscript{
       color: $fontGray;
-      font-size: 16px;
+      font-size: rem(16px);
       line-height: 1.2;
-      width: 590px;
+      padding: 0 20%;
       text-align: center;
       margin: 0 auto;
     }
@@ -46,8 +46,8 @@
     &::before{
       content: '';
       display: block;
-      width: 36px;
-      height: 36px;
+      width: rem(36px);
+      height: rem(36px);
       border-radius: 50%;
       background-color: #868686;
       position: absolute;
@@ -59,7 +59,7 @@
   }
   &--reviews &{
     &__title{
-      margin-bottom: 32px;
+      margin-bottom: rem(32px);
     }
   }
 
@@ -69,7 +69,34 @@
   }
   &--order &{
     &__title{
-      margin-bottom: 61px;
+      margin-bottom: rem(61px);
+    }
+  }
+
+  @include tablets{
+    &--order &{
+      &__title{
+        margin-bottom: rem(30px);
+      }
+    }
+    &--benefits &{
+      &__title-postscript{
+        padding: 0 15%;
+      }
+    }
+  }
+  @include phones{
+    &__title{
+      color: black;
+    }
+    &--order &__title{
+      color: white;
+      margin-bottom: 40px;
+    }
+    &--benefits &{
+      &__title-postscript{
+        padding: 0 4.5%;
+      }
     }
   }
 }

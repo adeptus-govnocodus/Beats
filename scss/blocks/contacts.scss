@@ -1,6 +1,16 @@
 .contacts{
-  &__phone::before{
-    content: url('../img/icons/Vector.svg');
-    margin-right: 6px;
+  &__phone-icon{
+    width: 14px;
+    height: 15px;
+    margin-right: rem(6px);
+  } 
+
+  @include phones{
+    text-align: center;
+    margin-bottom: 19px;
+
+    &__addres{
+      margin-bottom: 12px;
+    }
   }
 }

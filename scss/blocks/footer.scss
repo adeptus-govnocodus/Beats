@@ -2,6 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 18px;
+  padding-top: rem(20px);
+  padding-bottom: rem(18px);
+
+  @include phones{
+    flex-direction: column;
+    
+  }
 }

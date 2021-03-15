@@ -1,17 +1,17 @@
 .fixed-menu{
   position: fixed;
   top: 20%;
-  right: 3%;
+  right: 2%;
 
   &__item{
-    margin-bottom: 2px;
+    margin-bottom: rem(2px);
     &:last-child{ margin-bottom: 0; }
   }
   &__link{
     display: block;
-    width: 18px;
-    height: 18px;
-    border: 1px solid transparent;
+    width: rem(18px);
+    height: rem(18px);
+    border: rem(1px) solid transparent;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -19,8 +19,8 @@
     &::before{
       content: '';
       display: block;
-      width: 6px;
-      height: 6px;
+      width: rem(6px);
+      height: rem(6px);
       border-radius: 50%;
       background-color: #7B7B7B;
     }    
@@ -30,5 +30,9 @@
     &::before{
       background-color: $red;
     }
+  }
+
+  @include tablets{
+    display: none;
   }
 }

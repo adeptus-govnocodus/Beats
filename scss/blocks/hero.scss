@@ -1,13 +1,14 @@
 .hero{
   position: relative;
   height: 100vh;
-  min-height: 651px;
+  min-height: rem(651px);
 
-  padding-top: 24px;
-  padding-bottom: 66px;
+  padding-top: rem(24px);
+  padding-bottom: rem(66px);
 
-  background:
-    url('../img/hero-img.png') center right 20% no-repeat #F5F5F5; 
+  // background:
+  //   url('../img/hero-img.png') center right 20% no-repeat #F5F5F5; 
+  background-color: #F5F5F5;
 
 
   &__container{
@@ -15,23 +16,30 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    background:
+      url('../img/hero-img.png') center right no-repeat; 
   }
   &__header{
-    margin-bottom: 94px;
+    margin-bottom: rem(94px);
   }
 
   &__title-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 43%;
-    margin-bottom: 66px;
+    min-width: rem(400px);
+    margin-bottom: rem(66px);
   }
   &__title{
-    margin-bottom: 22px;
+    margin-bottom: rem(22px);
   }
   &__title-desc{
     font-family: "Alegreya Sans", sans-serif;
-    font-size: 21px;
+    font-size: rem(21px);
     line-height: 1.2;
-    margin-bottom: 36px;
+    margin-bottom: rem(36px);
     width: 85%;
   }
 
@@ -39,13 +47,73 @@
   &::after{
     content: "";
     display: block;
-    width: 46px;
-    height: 10px;
+    width: rem(46px);
+    height: rem(10px);
     position: absolute;
     top: 100%;
     right: 11.5%;
     transform: translateY(-50%) rotate(-45deg);
     background-color: #C4C4C4;
     z-index: 1; 
+  }
+
+
+  @include tablets{
+    &__container{
+      background-image: none;
+    }
+
+    &__header{
+      margin-bottom: 0;
+    }
+
+    &__title-section{
+      min-width: none;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      flex: 1;
+
+      &::before{
+        content: '';
+        background:
+          url('../img/background/hero-1.png') center center / cover no-repeat;
+        display: block;
+        width: 323px;
+        height: 323px;
+        margin-bottom: rem(65px);
+      }
+    }
+    &__title{
+      margin-bottom: rem(9px);
+      padding: 0 5.1%;
+    }
+    &__title-desc{
+      margin-bottom: rem(23px);
+      padding: 0 15.2%;
+    }
+
+
+    &__icons-section{
+      display: none;
+    }
+  }
+
+  @include phones{
+    &__title-section{
+      &::after{
+        margin-bottom: 48px;
+      }
+    }
+    &__title{
+      padding: 0 7.2%;
+      margin-bottom: 16px;
+    }
+    &__title-desc{
+      padding: 0 9%
+    }
+
   }
 }
