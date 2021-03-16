@@ -1,15 +1,21 @@
 .section{
   position: relative;
-  height: 100vh;
   min-height: rem(651px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
   &__title{
     text-align: center;
   }
   
+  &__wrapper{
+    padding: 50px 0;
+    flex: 1 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   
   &--benefits{
     &::before{
@@ -42,6 +48,7 @@
     }
   }
 
+
   &--reviews{
     &::before{
       content: '';
@@ -63,6 +70,7 @@
     }
   }
 
+
   &--order{
     background-color: #161616;
     color: white;
@@ -73,6 +81,8 @@
     }
   }
 
+
+  
   @include tablets{
     &--order &{
       &__title{

@@ -1,7 +1,8 @@
 .hero{
   position: relative;
-  height: 100vh;
-  min-height: rem(651px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   padding-top: rem(24px);
   padding-bottom: rem(66px);
@@ -16,6 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1;
     
     background:
       url('../img/hero-img.png') center right no-repeat; 
@@ -68,7 +70,7 @@
     }
 
     &__title-section{
-      min-width: none;
+      min-width: 0;
       width: 100%;
       text-align: center;
       align-items: center;
@@ -79,9 +81,10 @@
       &::before{
         content: '';
         background:
-          url('../img/background/hero-1.png') center center / cover no-repeat;
+          url('../img/background/hero-1.png') center center / contain no-repeat;
         display: block;
         width: 323px;
+        max-width: 100%;
         height: 323px;
         margin-bottom: rem(65px);
       }
