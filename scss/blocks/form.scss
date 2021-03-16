@@ -128,9 +128,9 @@
     }
   }
   &__input{
-    height: 38px;
+    height: rem(38px);
     &--textarea{
-      height: 82px;
+      height: rem(82px);
     }
   }
 }

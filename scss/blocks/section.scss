@@ -101,7 +101,7 @@
     }
     &--order &__title{
       color: white;
-      margin-bottom: 40px;
+      margin-bottom: rem(40px);
     }
     &--benefits &{
       &__title-postscript{

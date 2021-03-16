@@ -107,12 +107,12 @@
   @include phones{
     &__title-section{
       &::after{
-        margin-bottom: 48px;
+        margin-bottom: rem(48px);
       }
     }
     &__title{
       padding: 0 7.2%;
-      margin-bottom: 16px;
+      margin-bottom: rem(16px);
     }
     &__title-desc{
       padding: 0 9%
