@@ -9,7 +9,7 @@
   }
   
   &__wrapper{
-    padding: 50px 0;
+    padding: rem(50px) 0;
     flex: 1 0;
     min-height: 100vh;
     display: flex;
@@ -45,6 +45,23 @@
       padding: 0 20%;
       text-align: center;
       margin: 0 auto;
+    }
+  }
+
+
+  &--slider{
+    background-color: #F8FAF9;
+
+    &::after{
+      content: '';
+      display: block;
+      width: rem(30px);
+      height: rem(30px);
+      background-color: #292929;
+      position: absolute;
+      top: 100%;
+      right: 8%;
+      transform: translateY(-50%) rotate(25deg);
     }
   }
 

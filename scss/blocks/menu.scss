@@ -1,0 +1,18 @@
+.menu{  
+  font-size: 36px;
+  text-align: center;
+
+  &__list{
+    display: flex;
+  }
+
+
+  &--vertical &{
+    &__list{
+      flex-direction: column;
+    }
+    &__item{
+      margin-bottom: rem(24px);
+    }
+  }
+}

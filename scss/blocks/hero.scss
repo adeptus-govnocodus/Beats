@@ -83,9 +83,9 @@
         background:
           url('../img/background/hero-1.png') center center / contain no-repeat;
         display: block;
-        width: 323px;
+        width: rem(323px);
         max-width: 100%;
-        height: 323px;
+        height: rem(323px);
         margin-bottom: rem(65px);
       }
     }

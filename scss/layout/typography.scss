@@ -20,3 +20,8 @@
   font-size: rem(24px);
   line-height: 1.16;
 }
+@mixin text-st{  
+  color: $fontGray;
+  font-size: rem(16px);
+  line-height: 1.2;
+}

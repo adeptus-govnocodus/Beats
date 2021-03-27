@@ -20,9 +20,6 @@
     margin-bottom: rem(38px);
 
     p{
-      color: $fontGray;
-      font-size: rem(16px);
-      line-height: 1.2;
     }
   }
   &__username{
@@ -34,8 +31,8 @@
   &::after{
     content: "";
     display: block;
-    width: 83px;
-    height: 83px;
+    width: rem(83px);
+    height: rem(83px);
     background-color: white;
     position: absolute;
     left: 50%;
@@ -58,7 +55,7 @@
     text-align: center;
 
     &__img-col{
-      max-width: 130px;
+      max-width: rem(130px);
       padding: 0;
       padding-top: rem(56px);
       margin-bottom: rem(32px);      

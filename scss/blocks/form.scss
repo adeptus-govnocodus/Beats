@@ -126,11 +126,12 @@
     &__controlls-row{
       justify-content: center;
     }
-  }
-  &__input{
-    height: rem(38px);
-    &--textarea{
-      height: rem(82px);
+    
+    &__input{
+      height: rem(38px);
+      &--textarea{
+        height: rem(82px);
+      }
     }
   }
 }
