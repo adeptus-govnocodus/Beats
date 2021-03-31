@@ -76,13 +76,13 @@
   }
   &__title{
     margin-bottom: rem(24px);
-    text-transform: uppercase;
+    @include tp-headline_2
   }
   &__text{
     margin-bottom: rem(27px);
     width: 88%;
     p{
-      @include text-st;
+      @include tp-body_1--gray;
     }
   }
   &__info{
@@ -94,15 +94,10 @@
       &:last-child{margin-right: 0;}
     }
     &-title{
-      @include text-st;
+      @include tp-body_1--gray;
     }
     &-val{
-      font-weight: 700;
-      font-size: rem(18px);
-    }
-    &-val{
-      font-weight: 700;
-      font-size: rem(18px);
+      @include tp-body_2--light
     }
   }
   &__row{

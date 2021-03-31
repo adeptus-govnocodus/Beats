@@ -22,11 +22,10 @@
   }
   &__title{
     margin-bottom: rem(7px);
+    @include tp-headline_3; 
   }
   &__text{
-    font-size: rem(16px);
-    line-height: 1.2;
-    color: $fontGray;
+    @include tp-body_1--gray;
   }
 
   @include tablets{

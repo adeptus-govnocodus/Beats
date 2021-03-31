@@ -36,6 +36,7 @@
   }
   &__title{
     margin-bottom: rem(22px);
+    @include tp-headline_1;
   }
   &__title-desc{
     font-family: "Alegreya Sans", sans-serif;

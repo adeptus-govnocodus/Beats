@@ -1,0 +1,97 @@
+.team{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+
+  &__item{
+    max-width: 220px;
+    position: relative;
+    margin-right: 20px;
+    &:last-child{margin-right: 0;}
+    cursor: pointer;
+  }
+  &__photo{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  &__title{
+    @include tp-body_2--bold;
+    margin-bottom: 11px;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  &__name{
+    white-space: normal;
+  }
+  &__arrow{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top: 7px solid transparent;
+    border-bottom-width: 0;
+    margin-bottom: 2px;
+  }
+  &__content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+  }
+  &__post{
+    @include tp-body_1--black;
+  }
+  &__text-content{
+    p{
+      @include tp-body_1--gray;
+    }
+  }
+
+
+  &--descktop &{
+    &__arrow{
+      border-top-color: #E01F3D;
+      border-bottom-color: #E01F3D;
+    }
+  }
+
+  
+  &--mobile{
+    display: none;
+    flex-direction: column;
+    align-items: center;    
+  }
+  &--mobile &{
+    &__item{
+      margin-right: 0;
+      margin-bottom: rem(17px);
+    }
+    &__post{
+      @include tp-body_2--bold;
+    }
+    &__arrow{
+      border-top-color: #365A49;
+      border-bottom-color: #365A49;
+    }
+    &__content{
+      position: relative;
+    }
+  }
+
+
+  @include tablets{
+    &--descktop{
+      display: none;
+    }
+    &--mobile{
+      display: flex;
+    }
+  }
+  @include phones{
+    &__photo{
+      display: inline-block;
+      max-width: rem(160px);
+    }
+  }
+}

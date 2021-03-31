@@ -6,6 +6,7 @@
 
   &__title{
     text-align: center;
+    @include tp-headline_1;
   }
   
   &__wrapper{
@@ -39,9 +40,7 @@
       margin-bottom: rem(18px);
     }
     &__title-postscript{
-      color: $fontGray;
-      font-size: rem(16px);
-      line-height: 1.2;
+      @include tp-body_1--gray;
       padding: 0 20%;
       text-align: center;
       margin: 0 auto;
@@ -62,6 +61,13 @@
       top: 100%;
       right: 8%;
       transform: translateY(-50%) rotate(25deg);
+    }
+  }
+
+
+  &--team &{
+    &__title{
+      margin-bottom: rem(52px);
     }
   }
 
