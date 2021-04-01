@@ -1,1 +1,1 @@
-const time = 200;
+const time = 100;

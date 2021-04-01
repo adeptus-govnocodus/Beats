@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide-core.min.css">
   <link rel="stylesheet" href="css/main.css">
 
   <title>Beats</title>
@@ -127,113 +128,215 @@
     <section class="section section--slider">
       <div class="section__wrapper">        
         <div class="container">
-          <div class="section__slider slider">
-            <ul class="slider__view">
-              <li class="slider__slide">
-                <div class="slider__image-wrapper">
-                  <div class="slider__image">
-                    <img class="slider__image-src" src="img/slider/1.png">
-                  </div>              
-                </div>
-                <div class="slider__content">
-                  <div class="slider__dropdown">
-                    <div class="slider__dropdown-btn">
-                      <svg class="slider__dropdown-svg">
-                        <use xlink:href="img/sprite.svg#gear"></use>
-                      </svg>
-                    </div>
-                    <div class="slider__dropdown-block">
-                      <ul class="slider__dropdown-list">
-                        <li class="slider__dropdown-item">
-                          <div class="slider__dropdown-title">
-                            <svg class="slider__dropdown-title-icon">
-                              <use xlink:href="img/sprite.svg#bluetooth"></use>
-                            </svg>
-                            Bluetooth
-                          </div>
-                          <div class="slider__dropdown-val">
-                            4.0
-                          </div>
-                        </li>
-                        <li class="slider__dropdown-item">
-                          <div class="slider__dropdown-title">
-                            <svg class="slider__dropdown-title-icon">
-                              <use xlink:href="img/sprite.svg#range"></use>
-                            </svg>
-                            Дальность 
-                          </div>
-                          <div class="slider__dropdown-val">
-                            12 м
-                          </div>
-                        </li>
-                        <li class="slider__dropdown-item">
-                          <div class="slider__dropdown-title">
-                            <svg class="slider__dropdown-title-icon">
-                              <use xlink:href="img/sprite.svg#charging"></use>
-                            </svg>
-                            Зарядка
-                          </div>
-                          <div class="slider__dropdown-val">
-                            3 ч
-                          </div>
-                        </li>
-                        <li class="slider__dropdown-item">
-                          <div class="slider__dropdown-title">
-                            <svg class="slider__dropdown-title-icon">
-                              <use xlink:href="img/sprite.svg#waight"></use>
-                            </svg>
-                            Вес
-                          </div>
-                          <div class="slider__dropdown-val">
-                            215гр
-                          </div>
-                        </li>
-                        <li class="slider__dropdown-item">
-                          <div class="slider__dropdown-title">
-                            <svg class="slider__dropdown-title-icon">
-                              <use xlink:href="img/sprite.svg#garanty"></use>
-                            </svg>
-                            Гарантия
-                          </div>
-                          <div class="slider__dropdown-val">
-                            1 год
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h2 class="slider__title">beats solo 3. цвет «атласное серебро»</h2>
-                  <div class="slider__text">
-                    <p>Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</p>
-                  </div>
-                  <ul class="slider__info">
-                    <li class="slider__info-item">
-                      <div class="slider__info-title">Зарядка</div>
-                      <div class="slider__info-val">2  часа</div>
-                    </li>
-                    <li class="slider__info-item">
-                      <div class="slider__info-title">Вес</div>
-                      <div class="slider__info-val">215 грамм</div>
-                    </li>
-                  </ul>
-                  <div class="slider__row">
-                    <div class="slider__prise">14 990 ₽</div>
-                    <div class="slider__btn btn btn--color--red-bg">заказать</div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <div class="slider__arrow slider__arrow--left">
-              <svg class="slider__arrow-svg">
-                <use xlink:href="img/sprite.svg#arrow_left"></use>
-              </svg>
+
+          <div class="section__slider slider splide" id="splide">
+
+            <div class="slider__arrows splide__arrows">
+              <button class="slider__arrow slider__arrow--left splide__arrow splide__arrow--prev">
+                <svg class="slider__arrow-svg">
+                  <use xlink:href="img/sprite.svg#arrow_left"></use>
+                </svg>
+              </button>
+              <button class="slider__arrow slider__arrow--right splide__arrow splide__arrow--next">
+                <svg class="slider__arrow-svg">
+                  <use xlink:href="img/sprite.svg#arrow_right"></use>
+                </svg>
+              </button>
             </div>
-            <div class="slider__arrow slider__arrow--right">
-              <svg class="slider__arrow-svg">
-                <use xlink:href="img/sprite.svg#arrow_right"></use>
-              </svg>
+            
+            <div class="slider__track splide__track">
+              <ul class="slider__view splide__list">
+                <li class="slider__slide splide__slide">
+                  <div class="slider__image-wrapper">
+                    <div class="slider__image">
+                      <img class="slider__image-src" src="img/slider/1.png">
+                    </div>              
+                  </div>
+                  <div class="slider__content">
+                    <div class="slider__dropdown">
+                      <div class="slider__dropdown-btn">
+                        <svg class="slider__dropdown-svg">
+                          <use xlink:href="img/sprite.svg#gear"></use>
+                        </svg>
+                      </div>
+                      <div class="slider__dropdown-block">
+                        <ul class="slider__dropdown-list">
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#bluetooth"></use>
+                              </svg>
+                              Bluetooth
+                            </div>
+                            <div class="slider__dropdown-val">
+                              4.0
+                            </div>
+                          </li>
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#range"></use>
+                              </svg>
+                              Дальность 
+                            </div>
+                            <div class="slider__dropdown-val">
+                              12 м
+                            </div>
+                          </li>
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#charging"></use>
+                              </svg>
+                              Зарядка
+                            </div>
+                            <div class="slider__dropdown-val">
+                              3 ч
+                            </div>
+                          </li>
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#waight"></use>
+                              </svg>
+                              Вес
+                            </div>
+                            <div class="slider__dropdown-val">
+                              215гр
+                            </div>
+                          </li>
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#garanty"></use>
+                              </svg>
+                              Гарантия
+                            </div>
+                            <div class="slider__dropdown-val">
+                              1 год
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h2 class="slider__title">beats solo 3. цвет «атласное серебро»</h2>
+                    <div class="slider__text">
+                      <p>Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</p>
+                    </div>
+                    <ul class="slider__info">
+                      <li class="slider__info-item">
+                        <div class="slider__info-title">Зарядка</div>
+                        <div class="slider__info-val">2  часа</div>
+                      </li>
+                      <li class="slider__info-item">
+                        <div class="slider__info-title">Вес</div>
+                        <div class="slider__info-val">215 грамм</div>
+                      </li>
+                    </ul>
+                    <div class="slider__row">
+                      <div class="slider__prise">14 990 ₽</div>
+                      <div class="slider__btn btn btn--color--red-bg">заказать</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__slide splide__slide">
+                  <div class="slider__image-wrapper">
+                    <div class="slider__image">
+                      <img class="slider__image-src" src="img/slider/2.png">
+                    </div>              
+                  </div>
+                  <div class="slider__content">
+                    <div class="slider__dropdown">
+                      <div class="slider__dropdown-btn">
+                        <svg class="slider__dropdown-svg">
+                          <use xlink:href="img/sprite.svg#gear"></use>
+                        </svg>
+                      </div>
+                      <div class="slider__dropdown-block">
+                        <ul class="slider__dropdown-list">
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#bluetooth"></use>
+                              </svg>
+                              Bluetooth
+                            </div>
+                            <div class="slider__dropdown-val">
+                              4.0
+                            </div>
+                          </li>
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#range"></use>
+                              </svg>
+                              Дальность 
+                            </div>
+                            <div class="slider__dropdown-val">
+                              10 м
+                            </div>
+                          </li>
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#charging"></use>
+                              </svg>
+                              Зарядка
+                            </div>
+                            <div class="slider__dropdown-val">
+                              3 ч
+                            </div>
+                          </li>
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#waight"></use>
+                              </svg>
+                              Вес
+                            </div>
+                            <div class="slider__dropdown-val">
+                              215гр
+                            </div>
+                          </li>
+                          <li class="slider__dropdown-item">
+                            <div class="slider__dropdown-title">
+                              <svg class="slider__dropdown-title-icon">
+                                <use xlink:href="img/sprite.svg#garanty"></use>
+                              </svg>
+                              Гарантия
+                            </div>
+                            <div class="slider__dropdown-val">
+                              1 год
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h2 class="slider__title">beats solo pro. цвет «красный цитрус»</h2>
+                    <div class="slider__text">
+                      <p>Беспроводные наушники Solo Pro помогают настроиться на творчество. Для этого предусмотрено два режима прослушивания: режим с активным шумоподавлением и Прозрачный режим.</p>
+                    </div>
+                    <ul class="slider__info">
+                      <li class="slider__info-item">
+                        <div class="slider__info-title">Зарядка</div>
+                        <div class="slider__info-val">2  часа</div>
+                      </li>
+                      <li class="slider__info-item">
+                        <div class="slider__info-title">Вес</div>
+                        <div class="slider__info-val">215 грамм</div>
+                      </li>
+                    </ul>
+                    <div class="slider__row">
+                      <div class="slider__prise">14 990 ₽</div>
+                      <div class="slider__btn btn btn--color--red-bg">заказать</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
@@ -438,67 +541,68 @@
           <h1 class="section__title">закажите доставку</h1>
   
           <form class="form">
+            <input type="hidden" name="to" value="some@mail.ru">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__cell">
                   <div class="form__title">Имя</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="name" class="form__input">
                 </label>
                 <label class="form__cell">
                   <div class="form__title">Телефон</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="phone" class="form__input">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__cell">
                   <div class="form__title">Улица</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="street" class="form__input">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__cell">
                   <div class="form__title">Дом</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="house" class="form__input">
                 </label>
                 <label class="form__cell">
                   <div class="form__title">Корпус</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="houseing" class="form__input">
                 </label>
                 <label class="form__cell">
                   <div class="form__title">Квартира</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="apartment" class="form__input">
                 </label>
                 <label class="form__cell">
                   <div class="form__title">Этаж</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="flat" class="form__input">
                 </label>
               </div>
             </div>
             <div class="form__col">
               <div class="form__row">
                 <label class="form__cell">
-                  <div class="form__title">Улица</div>
-                  <textarea name="" id="" cols="30" rows="10" class="form__input form__input--textarea"></textarea>
+                  <div class="form__title">Комментарий</div>
+                  <textarea name="comment" id="" cols="30" rows="10" class="form__input form__input--textarea"></textarea>
                 </label>
               </div>
               <div class="form__controlls">
                 <div class="form__controlls-row">
                   <label class="form__controll controll controll--radio">
-                    <input type="radio" name="name" class="controll__el">
+                    <input type="radio" name="payment" class="controll__el">
                     <div class="controll__visible"></div>
                     <div class="controll__title">Потребуется сдача</div>
                   </label>
                   <label class="form__controll controll controll--radio">
-                    <input type="radio" name="name" class="controll__el">
+                    <input type="radio" name="payment" class="controll__el">
                     <div class="controll__visible"></div>
                     <div class="controll__title">Оплата картой</div>
                   </label>
                 </div>
                 <div class="form__controlls-row">
                   <label class="form__controll controll controll--checkbox">
-                    <input type="checkbox" class="controll__el">
+                    <input type="checkbox" name="" class="controll__el">
                     <div class="controll__visible"></div>
-                    <div class="controll__title">Потребуется сдача</div>
+                    <div class="controll__title">Не перезванивать</div>
                   </label>
                 </div>
               </div>
@@ -595,6 +699,18 @@
     </ul>
   </nav>
 
+  <nav class="modal" css="">
+    <div class="modal__window">
+      <div class="modal__content">
+        <div class="modal__message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus nobis amet, rerum minus corrupti consectetur dolorum reprehenderit ut dicta explicabo ipsam expedita rem itaque! Eos soluta repellat culpa in. Facere.</div>
+
+        <div class="modal__btn-container">
+          <div class="modal__close-btn btn btn--color--red-bg">Закрыть</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <div class="overflow-menu">
     <div class="overflow-menu__close">
       <svg class="overflow-menu__close-icon">
@@ -616,9 +732,12 @@
   </div>
 
   <script src="js/resourses/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/overflow-menu.js"></script>
   <script src="js/team.js"></script>
   <script src="js/reviews.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>

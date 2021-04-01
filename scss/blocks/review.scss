@@ -24,7 +24,6 @@
   }
   &__content{
     padding: rem(74px) rem(107px) rem(63px) 0;
-    min-height: rem(300px);
   }
   &__header{
     margin-bottom: rem(27px);
@@ -34,7 +33,7 @@
     margin-bottom: rem(38px);
 
     p{
-      @include tp-body_1--gray
+      @include tp-body_1--gray;
     }
   }
   &__username{
@@ -63,10 +62,14 @@
   }
 
   @include tablets{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
+    &__display{      
+      min-height: rem(200px);
+    }
+    &__slide{      
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
     &__img-col{
       max-width: rem(130px);
       padding: 0;

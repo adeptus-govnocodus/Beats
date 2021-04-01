@@ -558,7 +558,7 @@ button {
   flex-shrink: 0;
   width: 48%;
   padding-top: 1.6666666667rem;
-  margin-right: 3.3333333333rem;
+  margin-right: 1.6666666667rem;
 }
 .slider__image {
   width: 100%;
@@ -676,6 +676,7 @@ button {
   transform: translateY(-50%);
   flex-shrink: 0;
   stroke: black;
+  z-index: 1;
 }
 .slider__arrow--left {
   right: 103%;
@@ -798,7 +799,6 @@ button {
 }
 .review__content {
   padding: 4.1111111111rem 5.9444444444rem 3.5rem 0;
-  min-height: 16.6666666667rem;
 }
 .review__header {
   margin-bottom: 1.5rem;
@@ -840,7 +840,10 @@ button {
   -o-transform: translateX(-50%);
 }
 @media screen and (max-width: 768px) {
-  .review {
+  .review__display {
+    min-height: 11.1111111111rem;
+  }
+  .review__slide {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -912,6 +915,10 @@ button {
 }
 .form__input:focus {
   box-shadow: 0 0 0 0.1666666667rem #E01F3D;
+}
+.form__input:invalid, .form__input.invalid {
+  box-shadow: 0 0 0 0.1666666667rem red;
+  color: red;
 }
 .form__controlls {
   margin-bottom: 2.5555555556rem;
@@ -1277,4 +1284,46 @@ button {
     display: inline-block;
     max-width: 8.8888888889rem;
   }
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333537d5;
+  z-index: 99999;
+}
+.modal__window {
+  max-width: 27.7777777778rem;
+  opacity: 1;
+  background-color: white;
+  padding: 2.0555555556rem 3.0555555556rem;
+  text-align: center;
+}
+.modal__message {
+  margin-bottom: 1rem;
+}
+.modal__btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .modal__window {
+    width: 16.6666666667rem;
+    max-width: 90%;
+  }
+  .modal__message {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+.modal.active {
+  display: flex;
 }
