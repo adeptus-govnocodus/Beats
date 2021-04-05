@@ -1,0 +1,12 @@
+.colors-section{
+  position: relative;
+  background-color: #444444;
+  color: white;
+  min-height: 100vh;
+  padding-top: 115px;
+  padding-left: 84px;
+
+  &__title{
+    @include tp-headline_1;
+  }  
+}
