@@ -67,7 +67,7 @@ task('svg', ()=>{
       svgo({
         plugins: [
           {
-            removeAttrs: { attrs: '(fill|stroke|style|width|height|data-*)' }
+            removeAttrs: { attrs: '(fill|stroke|style|width|height|data.*)' }
           }
         ]
       })
