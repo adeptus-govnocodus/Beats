@@ -1,12 +1,18 @@
 .colors-section{
   position: relative;
-  background-color: #444444;
+  background-color: rgb(68, 68, 68);
   color: white;
-  min-height: 100vh;
-  padding-top: 115px;
-  padding-left: 84px;
+  height: 100vh;
+  display: flex;
 
   &__title{
     @include tp-headline_1;
+    position: absolute;
+    top: 100px;
+    left: 8%;
   }  
+  
+  &__colors-menu{
+    margin-left: auto;
+  }
 }

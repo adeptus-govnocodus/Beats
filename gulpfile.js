@@ -44,7 +44,7 @@ task('styles', ()=>{
       }))
     )
     .pipe(mediaGroup())
-    .pipe(gulpIf(env === 'prod', cleanCss()))
+    .pipe(cleanCss())
     .pipe(gulpIf(env === 'dev', sourcemap.write()))
     .pipe(dest(DIST_PATH))
     .pipe(browserSync.reload({ stream: true }));

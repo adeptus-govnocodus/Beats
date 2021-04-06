@@ -35,7 +35,6 @@
         hideModal();
     })  
     $(window).on('keydown', e=>{
-      console.log('key');
       if(e.keyCode === 27) 
         hideModal();
     })

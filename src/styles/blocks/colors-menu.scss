@@ -1,9 +1,80 @@
 .colors-menu{
-  position: absolute;
-  right: 0;
-  width: 100%;
+  $buttonWidth: 102px;
+  $contentWidth: 524px; 
+
+  display: flex;
 
   &__item{
-    width: 100%;
+    position: relative;
+    display: flex;
   }
+
+
+  &__button{
+    height: 100%;
+    width: $buttonWidth; 
+    flex: 0 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 34px 30px;
+  }
+  &__item--bg--silver &__button{
+    background-color: #999999;
+  }
+  &__item--bg--black &__button{
+    background-color: #151515;
+  }
+  &__item--bg--red &__button{
+    background-color: #E01F3C;
+  }
+
+  &__title{
+    @include tp-headline_2;
+    transform-origin: 20px 20px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    width: 48px;
+  }
+
+
+  &__container{
+    width: 0;
+    @include tp-body_1;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: width 400ms;
+  }
+  &__item--bg--silver &__container{
+    background-color: #99999966;
+  }
+  &__item--bg--black &__container{
+    background-color: #15151566;
+  }
+  &__item--bg--red &__container{
+    background-color: #E01F3C66;
+  }
+  &__item.active &__container{
+    width: $contentWidth;
+  }
+  
+  &__content{
+    width: $contentWidth;
+  }
+
+  &__close{
+    position: absolute;
+
+  }
+  &__text-content{
+    padding: 31px 38px;
+  }
+
+  @media screen and (max-width: ($buttonWidth*3)+$contentWidth){
+    &__item.active &__container{
+      width: calc(100vw - (102px * 3));
+    } 
+    &__content{
+      width: calc(100vw - (102px * 3));
+    }
+  } 
 }

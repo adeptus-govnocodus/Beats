@@ -1,38 +1,43 @@
 @mixin tp-headline_1{
   font-weight: 700;
-  font-size: rem(48px);
+  font-size: 48px;
   line-height: 1.1;
   text-transform: uppercase;
 }
 @mixin tp-headline_2{
   font-weight: 700;
-  font-size: rem(36px);
+  font-size: 36px;
   line-height: 1.16;
   text-transform: uppercase;
 }
 @mixin tp-headline_3{
   font-weight: 700;
-  font-size: rem(24px);
+  font-size: 24px;
   line-height: 1.16;
 }
 
 @mixin tp-body_2--bold{
   font-weight: 700;
-  font-size: rem(18px);  
+  font-size: 18px;  
   line-height: 1.2;
 }
 @mixin tp-body_2--light{
-  font-size: rem(18px);  
+  font-size: 18px;  
   line-height: 1.4;
 }
 
+
+@mixin tp-body_1{
+  font-size: 16px;
+  line-height: 1.2;
+}
 @mixin tp-body_1--gray{  
   color: $fontGray;
-  font-size: rem(16px);
+  font-size: 16px;
   line-height: 1.2;
 }
 @mixin tp-body_1--black{  
   color: black;
-  font-size: rem(16px);
+  font-size: 16px;
   line-height: 1.2;
 }
