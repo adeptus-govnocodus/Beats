@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 
   reviewBtn.on('click', function(){
-    $this = $(this);
+    let $this = $(this);
 
     if( $this.attr('slide-link') === currReview.attr('slide-id') ) return;
 

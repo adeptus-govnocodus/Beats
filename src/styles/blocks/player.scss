@@ -1,3 +1,138 @@
 .player{
-  
+  position: relative;
+  width: 662px;
+  height: 391px;
+  margin: auto;
+
+  &__view{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__splash{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/player/preview.png') no-repeat center center/ cover;
+
+    &-icon{
+      position: absolute;
+      top: 50%;
+      left: 50%;  
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 70px;
+      transition: width 100ms, height 100ms;
+      fill: white;
+    }
+
+    &:hover &-icon{
+      width: 70px;
+      height: 90px;
+    }
+  }
+
+
+  &__controlls{
+    background-color: #151515;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 34px;
+    color: white;
+    padding: 0 17px;
+    display: flex;
+  }
+  &__start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+
+    &-svg{
+      fill: white;
+      width: 11px;
+      height: 15px;
+      transition: fill 200ms;
+
+      &.pause{
+        display: none;
+      }
+    }
+    &:hover &-svg{
+      fill: $red;
+    }
+  }
+  &__playback{
+    flex: 1;
+    margin-right: 44px;
+    display: flex;
+    align-items: center;
+  }
+  &__playback:hover &__progress-bar{
+    height: 8px;
+  }
+  &__progress{
+    &-bar{
+      position: relative;
+      height: 4px;
+      width: 100%;
+      background-color: #333333;
+      border-radius: 9999999px;
+      transition: height 100ms;
+    }
+    &-complited{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background-color: $red;
+      border-radius: 9999999px 0 0 9999999px;
+    }
+    &-draggable{
+      width: 15px;
+      height: 15px;
+      background-color: $red;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+  }
+  &__duration{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    @include tp-body_1--gray;
+  }
+
+  &.active &{
+    &__splash{
+      display: none;
+    }
+    &__start-svg{
+      &.play{
+        display: none;
+      }
+      &.pause{
+        display: block;
+      }
+    }
+  }
+  &.paused &{
+    &__start-svg{
+      &.play{
+        display: block;
+      }
+      &.pause{
+        display: none;
+      }
+    }
+  }
 }

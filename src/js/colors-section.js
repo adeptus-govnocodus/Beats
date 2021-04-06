@@ -26,10 +26,12 @@ $(function(){
     }
   })
   $(document).on('click', e=>{
-    $target = $(e.target);
-    if( !($target.hasClass('colors-menu__item') || $target.closest('.colors-menu__item').length) ){
-      currActive.removeClass('active');
-      currActive = null;
+    if(currActive){      
+      let $target = $(e.target);
+      if( !($target.hasClass('colors-menu__item') || $target.closest('.colors-menu__item').length) ){
+        currActive.removeClass('active');
+        currActive = null;
+      }
     }
   })
 })

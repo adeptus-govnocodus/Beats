@@ -4,6 +4,9 @@
   display: flex;
   flex-direction: column;
 
+  &::after, &::before{
+    z-index: 1;
+  }
   &__title{
     text-align: center;
     @include tp-headline_1;
@@ -84,7 +87,6 @@
       top: 100%;
       left: 8%;
       transform: translateY(-45%);
-      z-index: 1;
     }
   }
   &--reviews &{
@@ -93,6 +95,23 @@
     }
   }
 
+  &--player{
+    background-color: #F8FAF9;
+    &::after{
+      content: url('img/icons/pentagon.svg');
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 100%;
+      transform: translateY(-50%);
+      right: 10%;
+    }
+  }
+  &--player &{
+    &__title{
+      margin-bottom: 44px;
+    }
+  }
 
   &--order{
     background-color: #161616;

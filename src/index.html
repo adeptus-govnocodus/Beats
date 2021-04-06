@@ -583,9 +583,34 @@
           <div class="player">
             <div class="player__view">
               <div id="yt-player" class="player__el"></div>
-              <div class="player__splash"></div>
+              <div class="player__splash">
+                <svg class="player__splash-icon">
+                  <use xlink:href="sprite.svg#icon--play"></use>
+                </svg>
+              </div>
             </div>
-            .player__controlls
+            <div class="player__controlls">
+              <div class="player__start">
+                <svg class="player__start-svg play">
+                  <use xlink:href="sprite.svg#icon--play"></use>
+                </svg>
+                <svg class="player__start-svg pause">
+                  <use xlink:href="sprite.svg#icon--pause"></use>
+                </svg>
+              </div>
+              <div class="player__playback">
+                <div class="player__progress-bar">
+                  <div class="player__progress-complited"></div>
+                  <div class="player__progress-draggable"></div>
+                </div>
+              </div>
+              <div class="player__duration">
+                <div class="player__duration-val">
+                  <span class="player__duration-complited">0:00</span> :
+                  <span class="player__duration-estimate">0:00</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -786,6 +811,7 @@
     </div>
   </div>
 
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="main.min.js"></script>
 </body>
 </html>

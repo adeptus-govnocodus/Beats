@@ -19,13 +19,13 @@
     padding: 34px 30px;
   }
   &__item--bg--silver &__button{
-    background-color: #999999;
+    background-color: $gray;
   }
   &__item--bg--black &__button{
-    background-color: #151515;
+    background-color: $black;
   }
   &__item--bg--red &__button{
-    background-color: #E01F3C;
+    background-color: $red;
   }
 
   &__title{

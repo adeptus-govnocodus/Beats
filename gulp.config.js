@@ -7,6 +7,7 @@ module.exports = {
   ],
   JAVASCRIPT_LIBS: [
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/@splidejs/splide/dist/js/splide.js'
+    'node_modules/@splidejs/splide/dist/js/splide.js',
+    'https://api-maps.yandex.ru/2.1/?&lang=ru_RU'
   ]
 }

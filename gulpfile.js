@@ -37,7 +37,7 @@ task('styles', ()=>{
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(px2rem())
+    //.pipe(px2rem())
     .pipe(gulpIf(env === 'dev', 
       autoprefixer({
         cascade: false
@@ -51,7 +51,7 @@ task('styles', ()=>{
 });
 
 task('javascript',()=>{
-  return src([...JAVASCRIPT_LIBS, `${SRC_PATH}/js/*.js`])
+  return src([...JAVASCRIPT_LIBS, `${SRC_PATH}/js/*.js`],{ allowEmpty: true })
     .pipe(gulpIf(env === 'dev', sourcemap.init()))
     .pipe(concat('main.min.js', { newLine: ';' }))
     .pipe(gulpIf(env === 'prod', babel({ presets: ['@babel/env'] }) ))
@@ -65,9 +65,9 @@ task('svg', ()=>{
   return src(`${SRC_PATH}/svg/**/*.svg`)
     .pipe(
       svgo({
-        pluggins: [
+        plugins: [
           {
-            removeAttrs: { attrs: '(fill|stroke|style|width|height|data.*)' }
+            removeAttrs: { attrs: '(fill|stroke|style|width|height|data-*)' }
           }
         ]
       })
