@@ -1,6 +1,7 @@
 .player{
   position: relative;
   width: 662px;
+  max-width: 96%;
   height: 391px;
   margin: auto;
 
@@ -134,5 +135,10 @@
         display: none;
       }
     }
+  }
+
+  @include phones{
+    width: 394px;
+    max-width: 96%;
   }
 }

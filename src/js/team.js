@@ -52,4 +52,21 @@
       borderBottomWidth: parseInt(arrowWidth)
     },time/2)
   }
+
+  $(window).on('keydown',e=>{
+    if(currIndex !== null && e.keyCode === 27){
+      hideContent(currIndex)
+      currIndex = null;
+    }
+  })
+
+  $(document).on('click', e=>{
+    if(currIndex !== null){      
+      let $target = $(e.target);
+      if( !($target.hasClass('team__item') || $target.closest('.team__item').length) ){
+        hideContent(currIndex)
+        currIndex = null;
+      }
+    }
+  })
 })()

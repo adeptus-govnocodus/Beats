@@ -1,5 +1,6 @@
 .colors-menu{
   $buttonWidth: 102px;
+  $buttonWidthPhone: 90px;
   $contentWidth: 524px; 
 
   display: flex;
@@ -76,5 +77,16 @@
     &__content{
       width: calc(100vw - (102px * 3));
     }
-  } 
+  }
+  @include phones{
+    &__button{
+      width: $buttonWidthPhone;
+    }
+    &__item.active &__container{
+      width: calc(100vw - (90px * 3));
+    } 
+    &__content{
+      width: calc(100vw - (90px * 3));
+    }
+  }
 }
