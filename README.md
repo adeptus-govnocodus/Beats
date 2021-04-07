@@ -9,3 +9,4 @@
 
 * npm run dev: for development mode
 * npm run build: for production mode
+* npm run gulp: for using gulp
