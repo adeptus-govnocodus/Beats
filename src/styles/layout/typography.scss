@@ -3,6 +3,9 @@
   font-size: 48px;
   line-height: 1.1;
   text-transform: uppercase;
+  @include phones{
+    font-size: 36px;
+  }
 }
 @mixin tp-headline_2{
   font-weight: 700;

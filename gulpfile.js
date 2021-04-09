@@ -5,7 +5,7 @@ const concat = require('gulp-concat');
 const browserSync = require('browser-sync');
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
-const px2rem = require('gulp-px2rem');
+const px2rem = require('gulp-px2rem-converter');
 const mediaGroup = require('gulp-group-css-media-queries');
 const cleanCss = require('gulp-clean-css');
 const sourcemap = require('gulp-sourcemaps');
@@ -37,7 +37,7 @@ task('styles', ()=>{
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    //.pipe(px2rem())
+    .pipe(px2rem())
     .pipe(gulpIf(env === 'dev', 
       autoprefixer({
         cascade: false
