@@ -2,6 +2,9 @@ let player;
 let playerElement = $('.player');
 let videoDuration;
 
+
+let isTimelineHolding = false;
+
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('yt-player', {
     width: playerElement.width(),
@@ -30,9 +33,15 @@ eventInit();
 function eventInit(){
   $('.player__start').on('click', playBtnListener);
   $('.player__splash').on('click', playBtnListener);
-  $('.player__playback').on('click', pbClickListener);
+  //$('.player__playback').on('click', pbClickListener);
   $('.player__audio-controll').on('click', audioClickListener);
   $('.player__audio-btn').on('click', audioBtnClickListener);
+
+  $('.player__playback').on('mousedown', startTimelineHold)
+  $('.player__playback').on('mouseup', stopTimelineHold)
+
+  $('.player__audio-controll').on('mousedown', startAudioHold)
+  $('.player__audio-controll').on('mouseup', stopAudioHold)
 }
 
 
@@ -121,15 +130,14 @@ function pbClickListener(e){
   let timeRatio = e.offsetX / $(e.currentTarget).width();
   let newTime = videoDuration * timeRatio;
 
-  player.seekTo(Math.round(newTime));
+  setTimeline(Math.round(newTime));
 }
 
 function audioClickListener(e){
   let volume = (e.offsetX / $(e.currentTarget).width()) * 100;
 
-  changeAudioLine(volume)
   if(player.isMuted()) player.unMute();
-  player.setVolume(volume);
+  setAudio(volume);
 }
 
 function audioBtnClickListener(e){
@@ -144,6 +152,74 @@ function audioBtnClickListener(e){
   }
 }
 
+
+function startTimelineHold(e){
+  isTimelineHolding = true;
+  let timeRatio = e.offsetX / $(e.currentTarget).width();
+  let newTime = videoDuration * timeRatio;
+
+  setTimeline(Math.round(newTime));
+  $(document).on('mousemove', processTimelineHold);
+}
+function stopTimelineHold(e){
+  isTimelineHolding = false
+  
+  $(document).off('mousemove', processTimelineHold);
+}
+function processTimelineHold(e){
+  let timeline = $('.player__progress-bar');
+  let clientX = e.clientX;
+  let timelineX = timeline.offset().left;
+  let timelineWidth = timeline.outerWidth();
+
+  if( clientX < timelineX ){
+    setTimeline(0);
+  }
+  else if(clientX > ( timelineX + timelineWidth )){
+    setTimeline(videoDuration)
+  }
+  else{
+    let timeRatio = (clientX - timelineX) / timelineWidth;
+    let newTime = videoDuration * timeRatio;
+  
+    setTimeline(Math.round(newTime));
+  }
+}
+
+
+function startAudioHold(e){
+  isTimelineHolding = true;
+  
+  if(player.isMuted()) player.unMute();
+  let volume = (e.offsetX / $(e.currentTarget).width()) * 100;
+
+  setAudio(volume)
+  $(document).on('mousemove', processAudioHold);
+}
+function stopAudioHold(e){
+  isTimelineHolding = false
+  
+  $(document).off('mousemove', processAudioHold);
+}
+function processAudioHold(e){
+  let audioLine = $('.player__audio-line');
+  let clientX = e.clientX;
+  let audioLineX = audioLine.offset().left;
+  let audioLineWidth = audioLine.outerWidth();
+
+  if( clientX < audioLineX ){
+    setTimeline(0);
+  }
+  else if(clientX > ( audioLineX + audioLineWidth )){
+    setTimeline(videoDuration)
+  }
+  else{
+    let volume = ((clientX - audioLineX) / audioLineWidth) * 100;
+
+    setAudio(Math.round(volume))
+  }
+}
+
 //==========================================================================
 
 function changeAudioLine(volume){
@@ -153,6 +229,15 @@ function changeAudioLine(volume){
   $('.player__audio-draggable').css({
     left: `${volume}%`
   })
+}
+
+function setAudio(volume){
+  player.setVolume(volume);
+  changeAudioLine(volume);
+}
+
+function setTimeline(time){
+  player.seekTo(time);
 }
 
 
