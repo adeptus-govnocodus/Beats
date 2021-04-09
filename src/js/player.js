@@ -31,6 +31,9 @@ eventInit();
 
 
 function eventInit(){
+  $(window).on('resize', e=>{
+    player.setSize(playerElement.width(), playerElement.height())
+  })
   $('.player__start').on('click', playBtnListener);
   $('.player__splash').on('click', playBtnListener);
   $('.player__audio-btn').on('click', audioBtnClickListener);
@@ -220,7 +223,7 @@ function setAudio(volume){
 }
 
 function setTimeline(time){
-  player.seekTo(time);
+  player.seekTo(time, true);
 }
 
 
