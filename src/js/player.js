@@ -194,10 +194,10 @@ function processAudioHold(e){
   let audioLineWidth = audioLine.outerWidth();
 
   if( clientX < audioLineX ){
-    setTimeline(0);
+    setAudio(0);
   }
   else if(clientX > ( audioLineX + audioLineWidth )){
-    setTimeline(videoDuration)
+    setAudio(100);
   }
   else{
     let volume = ((clientX - audioLineX) / audioLineWidth) * 100;
