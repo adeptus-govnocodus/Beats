@@ -18,6 +18,9 @@ $(function(){
     newActive.addClass('active');
     currActive = newActive;
   })
+  $('.colors-menu__close').on('click', e=>{
+    $(e.target).closest('.colors-menu__item').removeClass('active');
+  })
 
   $(window).on('keydown',e=>{
     if(currActive && e.keyCode === 27){
