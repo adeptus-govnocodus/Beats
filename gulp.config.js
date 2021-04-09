@@ -8,5 +8,6 @@ module.exports = {
   JAVASCRIPT_LIBS: [
     'node_modules/jquery/dist/jquery.js',
     'node_modules/@splidejs/splide/dist/js/splide.js',
+    'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
   ]
 }

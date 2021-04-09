@@ -90,3 +90,18 @@ function shiftTransform(num){
     transform: `translateY(${pos}%)`
   })
 }
+
+$('.wrapper').on('touchmove', e=>e.preventDefault());
+
+$('body').swipe({
+  swipe: function(event, direction){
+    switch(direction){
+      case "down":
+        scrollPrev();
+        break;
+      case "up":
+        scrollNext();
+        break;
+    }
+  }
+});
