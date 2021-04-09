@@ -1,20 +1,16 @@
 (function(){
-  let overflowEl = document.querySelector('.overflow-menu');
-  let closeBtn = document.querySelector('.overflow-menu__close');
-  let openBtn = document.querySelector('#js-open-overflow');
+  let overflowEl = $('.overflow-menu');
+  let closeBtn = $('.overflow-menu__close');
+  let openBtn = $('#js-open-overflow');
 
 
-  let openMenu = (e) => {
-    overflowEl.classList.add('active');
-    document.documentElement.style.overflow = 'hidden';
-    document.body.scroll = "no";
+  let openMenu = e => {
+    overflowEl.addClass('active');
   }
-  let closeMenu = (e) => {
-    overflowEl.classList.remove('active');
-    document.documentElement.style.overflow = 'scroll';
-    document.body.scroll = "yes";
+  let closeMenu = e => {
+    overflowEl.removeClass('active');
   }
 
-  openBtn.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
+  openBtn.on('click', openMenu);
+  closeBtn.on('click', closeMenu);
 })()
