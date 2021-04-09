@@ -21,7 +21,8 @@ let isMobile = new MobileDetect(window.navigator.userAgent).mobile();
 
 $(window).on('wheel', e=>{
   if(isScrolling) return;
-  
+  if(e.ctrlKey) return;
+
 
   const deltaY = e.originalEvent.deltaY;
 
