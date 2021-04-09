@@ -4,6 +4,7 @@ let videoDuration;
 
 
 let isTimelineHolding = false;
+let isAudioHolding = false;
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('yt-player', {
@@ -39,10 +40,10 @@ function eventInit(){
   $('.player__audio-btn').on('click', audioBtnClickListener);
 
   $('.player__playback').on('mousedown', startTimelineHold)
-  $('.player__playback').on('mouseup', stopTimelineHold)
+  $(document).on('mouseup', stopTimelineHold)
 
   $('.player__audio-controll').on('mousedown', startAudioHold)
-  $('.player__audio-controll').on('mouseup', stopAudioHold)
+  $(document).on('mouseup', stopAudioHold)
 }
 
 
@@ -141,13 +142,17 @@ function audioBtnClickListener(e){
 
 function startTimelineHold(e){
   isTimelineHolding = true;
-  let timeRatio = e.offsetX / $(e.currentTarget).width();
+
+  let timeline = $('.player__progress-bar');
+  let timeRatio = (e.clientX - timeline.offset().left) / timeline.outerWidth();
   let newTime = videoDuration * timeRatio;
 
   setTimeline(Math.round(newTime));
   $(document).on('mousemove', processTimelineHold);
 }
 function stopTimelineHold(e){
+  if(!isTimelineHolding) return;
+
   isTimelineHolding = false
   
   $(document).off('mousemove', processTimelineHold);
@@ -174,16 +179,19 @@ function processTimelineHold(e){
 
 
 function startAudioHold(e){
-  isTimelineHolding = true;
+  isAudioHolding = true;
+  let audioLine = $('.player__audio-line')
   
   if(player.isMuted()) player.unMute();
-  let volume = (e.offsetX / $(e.currentTarget).width()) * 100;
+  let volume = ((e.clientX - audioLine.offset().left) / audioLine.outerWidth()) * 100;
 
   setAudio(volume)
   $(document).on('mousemove', processAudioHold);
 }
 function stopAudioHold(e){
-  isTimelineHolding = false
+  if(!isAudioHolding) return;
+
+  isAudioHolding = false
   
   $(document).off('mousemove', processAudioHold);
 }
