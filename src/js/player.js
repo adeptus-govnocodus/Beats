@@ -33,8 +33,6 @@ eventInit();
 function eventInit(){
   $('.player__start').on('click', playBtnListener);
   $('.player__splash').on('click', playBtnListener);
-  //$('.player__playback').on('click', pbClickListener);
-  $('.player__audio-controll').on('click', audioClickListener);
   $('.player__audio-btn').on('click', audioBtnClickListener);
 
   $('.player__playback').on('mousedown', startTimelineHold)
@@ -125,21 +123,6 @@ function playBtnListener(e){
     player.pauseVideo();
   }
 };
-
-function pbClickListener(e){
-  let timeRatio = e.offsetX / $(e.currentTarget).width();
-  let newTime = videoDuration * timeRatio;
-
-  setTimeline(Math.round(newTime));
-}
-
-function audioClickListener(e){
-  let volume = (e.offsetX / $(e.currentTarget).width()) * 100;
-
-  if(player.isMuted()) player.unMute();
-  setAudio(volume);
-}
-
 function audioBtnClickListener(e){
   if(player.isMuted()){
     player.unMute()
