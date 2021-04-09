@@ -18,6 +18,7 @@ $(function(){
     newActive.addClass('active');
     currActive = newActive;
   })
+
   $('.colors-menu__close').on('click', e=>{
     $(e.target).closest('.colors-menu__item').removeClass('active');
   })
@@ -28,6 +29,7 @@ $(function(){
       currActive = null;
     }
   })
+  
   $(document).on('click', e=>{
     if(currActive){      
       let $target = $(e.target);

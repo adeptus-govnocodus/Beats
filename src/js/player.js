@@ -30,7 +30,9 @@ eventInit();
 function eventInit(){
   $('.player__start').on('click', playBtnListener);
   $('.player__splash').on('click', playBtnListener);
-  $('.player__playback').on('click', pbClickListener)
+  $('.player__playback').on('click', pbClickListener);
+  $('.player__audio-controll').on('click', audioClickListener);
+  $('.player__audio-btn').on('click', audioBtnClickListener);
 }
 
 
@@ -38,14 +40,19 @@ function onPlayerReady(){
   videoDuration = player.getDuration();
   $('.player__duration-estimate').text(formanTime(videoDuration));
   
-  let interval;
-
-  if(typeof interval !== 'undefined'){
-    clearInterval(interval);
+  let timeChackInterval;
+  if(typeof timeChackInterval !== 'undefined'){
+    clearInterval(timeChackInterval);
   }
+  timeChackInterval = setInterval(timeWatcher, 100)
 
-  interval = setInterval(timeWatcher, 100)
-
+  let volume = player.getVolume()
+  $('.player__audio-current').css({
+    width: `${volume}%`
+  })
+  $('.player__audio-draggable').css({
+    left: `${volume}%`
+  })
 }
 
 function onPlayerStateChange(event){
@@ -69,7 +76,7 @@ function onPlayerStateChange(event){
   }
 }
 
-//------------------------------------------------------------------
+//==========================================================================
 // On ready functions
 
 function timeWatcher(){
@@ -97,7 +104,7 @@ function formanTime(time){
   return `${addZero(min)}:${addZero(sec)}`;
 }
 
-//------------------------------------------------------------------
+//==========================================================================
 // Event listeners
 
 function playBtnListener(e){
@@ -115,6 +122,37 @@ function pbClickListener(e){
   let newTime = videoDuration * timeRatio;
 
   player.seekTo(Math.round(newTime));
+}
+
+function audioClickListener(e){
+  let volume = (e.offsetX / $(e.currentTarget).width()) * 100;
+
+  changeAudioLine(volume)
+  if(player.isMuted()) player.unMute();
+  player.setVolume(volume);
+}
+
+function audioBtnClickListener(e){
+  if(player.isMuted()){
+    player.unMute()
+
+    changeAudioLine(player.getVolume());
+  } else {
+    player.mute();
+
+    changeAudioLine(0);
+  }
+}
+
+//==========================================================================
+
+function changeAudioLine(volume){
+  $('.player__audio-current').css({
+    width: `${volume}%`
+  })
+  $('.player__audio-draggable').css({
+    left: `${volume}%`
+  })
 }
 
 
