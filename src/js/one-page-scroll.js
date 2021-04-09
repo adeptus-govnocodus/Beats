@@ -16,6 +16,8 @@ activeSection.addClass('active');
 
 let isScrolling = false;
 
+let isMobile = new MobileDetect(window.navigator.userAgent).mobile();
+
 
 $(window).on('wheel', e=>{
   if(isScrolling) return;
@@ -93,15 +95,17 @@ function shiftTransform(num){
 
 $('.wrapper').on('touchmove', e=>e.preventDefault());
 
-$('body').swipe({
-  swipe: function(event, direction){
-    switch(direction){
-      case "down":
-        scrollPrev();
-        break;
-      case "up":
-        scrollNext();
-        break;
+if(isMobile){
+  $('body').swipe({
+    swipe: function(event, direction){
+      switch(direction){
+        case "down":
+          scrollPrev();
+          break;
+        case "up":
+          scrollNext();
+          break;
+      }
     }
-  }
-});
+  });
+}
