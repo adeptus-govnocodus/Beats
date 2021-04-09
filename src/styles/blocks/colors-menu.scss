@@ -119,10 +119,10 @@
     &__container{
       transition: width 0s;
     }
-    &__content{
+    & &__content{
       width: calc(100vw - #{$buttonWidthPhone});
     }
-    &__item.active &__container{
+    & &__item.active &__container{
       position: absolute;
       left: 100%;
       width: calc(100vw - #{$buttonWidthPhone});

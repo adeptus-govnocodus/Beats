@@ -7,8 +7,6 @@
   padding-top: rem(24px);
   padding-bottom: rem(66px);
 
-  // background:
-  //   url('../img/hero-img.png') center right 20% no-repeat #F5F5F5; 
   background-color: #F5F5F5;
 
 
@@ -20,7 +18,7 @@
     flex: 1;
     
     background:
-      url('../img/hero-img.png') center right no-repeat; 
+      url('img/hero-img.png') center right no-repeat; 
   }
   &__header{
     margin-bottom: rem(94px);
@@ -82,7 +80,7 @@
       &::before{
         content: '';
         background:
-          url('../img/background/hero-1.png') center center / contain no-repeat;
+          url('img/background/hero-1.png') center center / contain no-repeat;
         display: block;
         width: rem(323px);
         max-width: 100%;
