@@ -1,5 +1,4 @@
 let myMap
-
 ymaps.ready(init);
 
 function init(){
@@ -15,7 +14,7 @@ function init(){
     [59.555443, 150.805725]
   ]
 
-  myCollection = new ymaps.GeoObjectCollection({},{
+  let myCollection = new ymaps.GeoObjectCollection({},{
     draggable: false,
     iconLayout: 'default#image',
     iconImageHref: './img/icons/map-mark.svg',

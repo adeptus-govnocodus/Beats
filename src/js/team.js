@@ -31,8 +31,7 @@
     let arrows = elements.find('.team__arrow');
 
     elements.find('.team__content').slideUp(time);
-
-    console.log(parseInt(arrowWidth))
+    
     arrows.animate({
       borderBottomWidth: 0
     },time/2).animate({
